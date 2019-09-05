@@ -24,6 +24,14 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import Icon from 'react-native-vector-icons/FontAwesome5';
+const myButton = (
+  <Icon.Button name="facebook" onPress={this.loginWithFacebook} solid>
+    Login with Facebook
+  </Icon.Button>
+);
+
+
 const App = () => {
   return (
     <Fragment>
@@ -38,6 +46,7 @@ const App = () => {
               <Text style={styles.footer}>Engine: Hermes</Text>
             </View>
           )}
+          {myButton}
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Step One</Text>
